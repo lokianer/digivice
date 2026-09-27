@@ -22,6 +22,26 @@ Outer dimensions about 113 × 100 × 27 mm including the antenna, without the cl
 This repository contains the case: print files, print profiles, assembly guide and
 animations. Firmware and CAD sources are not included.
 
+## Firmware Preview
+
+The firmware is in development and not published yet. Screenshots from the desktop simulator,
+which runs the real firmware UI and V-Pet engine (480 × 480, round mask):
+
+![Firmware preview: clock, pedometer, V-Pet, menu, settings, debug panel](images/firmware/teaser.png)
+
+| Clock | Pedometer | V-Pet | Feeding |
+|---|---|---|---|
+| ![Clock](images/firmware/clock.png) | ![Pedometer](images/firmware/steps.png) | ![V-Pet with Agumon](images/firmware/vpet_agumon.png) | ![Feeding](images/firmware/vpet_feeding.png) |
+| **Ring menu** | **Mega stage** | **Settings** | **Debug panel** |
+| ![Ring menu](images/firmware/vpet_menu.png) | ![WarGreymon](images/firmware/vpet_wargreymon.png) | ![Settings](images/firmware/settings.png) | ![Debug panel](images/firmware/debug.png) |
+
+- **Clock:** the outer segments fill with the day's step goal, one orange segment runs with the
+  seconds.
+- **Pedometer:** today's steps, goal progress, estimated distance and the week.
+- **V-Pet:** the Digimon lives on the watch, walks, eats and evolves; the ring menu holds care,
+  training and battle. A debug mode triggers every event for testing.
+- The UI text is German for now.
+
 ## New in Version 1.2
 
 A review of version 1.1 (measurements on the print files, a strength calculation of the hooks
@@ -171,5 +191,6 @@ The video file carries the same credit in its metadata.
   that STEP model (© Waveshare, not covered by this license).
 - Digivice and Digimon are trademarks of Bandai. Digimon and its characters, including Agumon:
   © Akiyoshi Hongo, Toei Animation. The pixel figure on the display in the animations and the
-  film is fan art. This is a fan project, not affiliated with or endorsed by Bandai or Toei
+  film is fan art. The Digimon in the firmware preview are not covered by this project's
+  license. This is a fan project, not affiliated with or endorsed by Bandai or Toei
   Animation.

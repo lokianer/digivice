@@ -22,6 +22,25 @@ Außenmaß ca. 113 × 100 × 27 mm mit Antenne, ohne Clip.
 Dieses Repo enthält das Gehäuse: Druckdateien, Druckprofile, Anleitung und Animationen.
 Firmware und CAD-Quellen gehören nicht dazu.
 
+## Firmware-Vorschau
+
+Die Firmware ist in Arbeit und noch nicht veröffentlicht. Screenshots aus dem Simulator am
+Rechner, der die echte Oberfläche und V-Pet-Engine der Firmware ausführt (480 × 480, runde Maske):
+
+![Firmware-Vorschau: Uhr, Schrittzähler, V-Pet, Menü, Einstellungen, Debug-Panel](images/firmware/teaser.png)
+
+| Uhr | Schrittzähler | V-Pet | Füttern |
+|---|---|---|---|
+| ![Uhr](images/firmware/clock.png) | ![Schrittzähler](images/firmware/steps.png) | ![V-Pet mit Agumon](images/firmware/vpet_agumon.png) | ![Füttern](images/firmware/vpet_feeding.png) |
+| **Ringmenü** | **Stufe Mega** | **Einstellungen** | **Debug-Panel** |
+| ![Ringmenü](images/firmware/vpet_menu.png) | ![WarGreymon](images/firmware/vpet_wargreymon.png) | ![Einstellungen](images/firmware/settings.png) | ![Debug-Panel](images/firmware/debug.png) |
+
+- **Uhr:** Die Segmente außen füllen sich mit dem Tagesziel der Schritte, ein oranges Segment
+  läuft als Sekunde mit.
+- **Schrittzähler:** Schritte heute, Fortschritt zum Ziel, geschätzte Strecke und die Woche.
+- **V-Pet:** Das Digimon lebt auf der Uhr, läuft, frisst und digitiert; im Ringmenü liegen
+  Pflege, Training und Kampf. Ein Debug-Modus löst zum Testen jedes Ereignis aus.
+
 ## Neu in Version 1.2
 
 Eine Prüfung von Version 1.1 (Messungen an den Druckdateien, eine Festigkeitsrechnung der
@@ -170,5 +189,6 @@ Die Videodatei trägt dieselbe Angabe in ihren Metadaten.
   (© Waveshare, nicht Teil dieser Lizenz).
 - Digivice und Digimon sind Marken von Bandai. Digimon und seine Figuren, auch Agumon:
   © Akiyoshi Hongo, Toei Animation. Die Pixelfigur auf dem Display in den Animationen und im
-  Film ist Fan-Art. Fanprojekt, nicht mit Bandai oder Toei Animation verbunden und nicht von
-  ihnen unterstützt.
+  Film ist Fan-Art. Die Digimon in der Firmware-Vorschau fallen nicht unter die Lizenz dieses
+  Projekts. Fanprojekt, nicht mit Bandai oder Toei Animation verbunden und nicht von ihnen
+  unterstützt.
