@@ -30,8 +30,8 @@
     "wall_loops": "4",
     "top_shell_layers": "5",
     "bottom_shell_layers": "5",
-    "sparse_infill_density": "30%",
-    "sparse_infill_pattern": "gyroid",
+    "sparse_infill_density": "100%",
+    "sparse_infill_pattern": "zig-zag",
     "inner_wall_speed": [
         "100",
         "100"

@@ -6,8 +6,7 @@ Ein druckbares Gehäuse im Stil des Digimon-Adventure-Digivice für das runde
 Waveshare-Touch-Display (2,1″, 480 × 480) und einen LiPo-Akku. Alles wird gesteckt: kein
 Kleber, keine Schrauben, kein Löten.
 
-**Stand:** Version 1.1 (überarbeitet nach dem ersten Probedruck, v1.0). Ein Probedruck dieser
-Version steht noch aus.
+**Stand:** Version 1.2. Ein Probedruck von Version 1.2 steht noch aus.
 
 ![Digivice Reveal](media/reveal.gif)
 
@@ -23,6 +22,30 @@ Außenmaß ca. 113 × 100 × 27 mm mit Antenne, ohne Clip.
 Dieses Repo enthält das Gehäuse: Druckdateien, Druckprofile, Anleitung und Animationen.
 Firmware und CAD-Quellen gehören nicht dazu.
 
+## Neu in Version 1.2
+
+Eine Prüfung von Version 1.1 (Messungen an den Druckdateien, eine Festigkeitsrechnung der
+Haken und Probe-Slices) fand Fehler, die das Schließen verhindert hätten. Version 1.2 behebt
+sie:
+
+- **Clip:** Die Zapfen enden jetzt im Deckel und stoßen nicht mehr an die Frontwand; der
+  Deckel schließt auch mit aufgestecktem Clip. Der Arm ist voll breit und steht beim Druck auf
+  der Druckplatte.
+- **Rasthaken für PLA:** Eine Tasche im Deckel verlängert jeden Haken, der Haken wird zur
+  Spitze hin dünner, Wurzel und Nase sind verrundet. Rechnerisch braucht das Einrasten aller
+  acht Haken 30–50 N statt 170–280 N, gehalten wird der Deckel mit 44–89 N. Anschläge innen
+  verhindern, dass ein Haken beim Öffnen überbogen wird.
+- **Ausrichten:** Zwei Führungen am Zentrierring richten den Deckel aus, bevor die Haken die
+  Kante berühren. Eine Fase an der Kammeröffnung fängt Zentrierring und Elefantenfuß.
+- **Platine:** Becher auf den oberen Säulen fassen die Bolzenköpfe der Platine. Sie kann sich
+  nicht mehr verdrehen, der Schieber schaltet, statt die Platine zu drehen.
+- **Schieber:** Der Griff schlägt am Boden der Griffmulde an und rutscht nicht mehr in den
+  Kanal. Fasen an Steg und Nut fangen beim Schließen einen Versatz von ±1,35 mm statt
+  ±0,35 mm.
+- **Druck:** 45°-Dächer über Griffmulde und Schieberkanal, unter 45° auslaufende Kerben am
+  Rand: An den Flanken, in den Rastfenstern und im Schieberkanal entstehen keine Stützen mehr.
+  Platte 2 braucht gar keine Stützen.
+
 ## Was du brauchst
 
 | Teil | Menge | Quelle |
@@ -31,20 +54,22 @@ Firmware und CAD-Quellen gehören nicht dazu.
 | LiPo 803040, 3,7 V, 1000 mAh, 1,25-mm-Stecker, mit Schutzschaltung | 1 | Amazon, ASIN B0DPZNZ4D6 |
 | PLA-Filament, alle Teile | ca. 100 g | |
 
-Werkzeug: Seitenschneider oder Zange für die Stützen, eine Büroklammer für BOOT und RESET.
+Werkzeug: Seitenschneider oder Zange für die Stützen, ein Messschieber für den Akku, eine
+Büroklammer für BOOT und RESET.
 
-Der Akkustecker passt direkt in die Buchse `BAT` der Platine. Ein- und ausgeschaltet wird mit
-einem gedruckten Schieber an der rechten Flanke, der den Schalter der Platine bedient. Ein
+Der Akkustecker passt direkt in die Buchse `BAT` der Platine. Der Akku darf samt Schutzplatine
+und Klebeband höchstens 40,5 × 30,5 × 9,0 mm messen. Ein- und ausgeschaltet wird mit einem
+gedruckten Schieber an der rechten Flanke, der den Schalter der Platine bedient. Ein
 zusätzlicher Schalter ist nicht nötig.
 
 ## Druckdateien
 
 | Datei | Inhalt | Druck |
 |---|---|---|
-| `stl/front_multicolor.stl` | Frontschale; Gehäuse, drei Knöpfe und Antenne als getrennte Körper (AMS) | Gesicht oben, normale Stützen nur auf der Druckplatte |
+| `stl/front_multicolor.stl` | Frontschale; Gehäuse, drei Knöpfe und Antenne als getrennte Körper (AMS) | Gesicht oben, normale Stützen, Stil „Nahtlos“, nur auf der Druckplatte |
 | `stl/front_single_color.stl` | dieselbe Front als ein Körper | wie oben |
-| `stl/back_clip_slider.stl` | Rückdeckel, Gürtelclip und Ein-Aus-Schieber auf einer Platte | ohne Stützen (Clip: siehe unten) |
-| `stl/single/back.stl`, `clip.stl`, `slider.stl` | dieselben Teile einzeln, zum Nachdrucken | ohne Stützen (Clip: siehe unten) |
+| `stl/back_clip_slider.stl` | Rückdeckel, Gürtelclip und Ein-Aus-Schieber auf einer Platte | ohne Stützen |
+| `stl/single/back.stl`, `clip.stl`, `slider.stl` | dieselben Teile einzeln, zum Nachdrucken | ohne Stützen |
 
 Beide Platten passen auf 180 × 180 mm.
 
@@ -56,16 +81,16 @@ Beide Platten passen auf 180 × 180 mm.
 
 - **Material:** PLA für alle Teile, auch für Deckel und Rasthaken.
 - **Schichthöhe:** 0,16 mm, für scharfe Glyphen und gleichmäßige Haken.
-- **Platte 1 (Front):** **normale** Stützen, „Nur auf Druckplatte“, Schwellenwinkel 30°.
-  Keine Baumstützen: Sie wachsen von außen in die acht Rastfenster, und Reste dort blockieren
-  später die Haken.
-- **Platte 2 (Deckel, Clip, Schieber):** keine Stützen. Bambu Studio warnt hier trotzdem vor
-  „schwebenden Regionen“. Die liegen am Clip: Sein Arm beginnt 6 mm über der Platte, und die
-  zwei Zapfen stehen seitlich ab. Deckel und Schieber brauchen keine Stützen; zum Clip siehe
-  „Einstellungen für den Clip“ unten.
+- **Platte 1 (Front):** **normale** Stützen, Typ „Normal (auto)“, Stil „Nahtlos“ (in der
+  englischen Oberfläche „Snug“), „Nur auf Druckplatte“, Schwellenwinkel 30°. Keine
+  Baumstützen: Sie wachsen von außen in die acht Rastfenster, und Reste dort blockieren später
+  die Haken.
+- **Platte 2 (Deckel, Clip, Schieber):** keine Stützen. Auch der Arm des Clips steht auf der
+  Druckplatte.
 
 Die Front braucht Stützen nur in der Kammer unter der Frontplatte, wo später das Displayglas
-liegt, unter der Antenne und in der Hebelkerbe an der Unterkante.
+liegt, unter der Antenne und in der Hebelkerbe an der Unterkante. Rastfenster, Schieberkanal
+und Flanken bleiben frei.
 
 ### Profile für Bambu Studio (P1S)
 
@@ -75,28 +100,22 @@ importieren …** alle drei Dateien laden.
 
 | Profil | Art | für | Einstellungen |
 |---|---|---|---|
-| `Digivice Front 0.16mm` | Prozess | Platte 1 | normale Stützen nur auf der Druckplatte, 30°, 3 Schnittstellenschichten; 3 Wände, 15 % Gyroid; erste Schicht 10 mm/s; Elefantenfuß 0,15 mm |
-| `Digivice Back 0.16mm` | Prozess | Platte 2 | keine Stützen; 4 Wände, je 5 obere und untere Schichten, 30 % Gyroid; erste Schicht 10 mm/s, innere Wände 100 mm/s; Elefantenfuß 0,15 mm |
+| `Digivice Front 0.16mm` | Prozess | Platte 1 | normale Stützen, Stil „Nahtlos“, nur auf der Druckplatte, 30°, 3 Schnittstellenschichten; 3 Wände, 15 % Gyroid; erste Schicht 10 mm/s; Elefantenfuß 0,15 mm |
+| `Digivice Back 0.16mm` | Prozess | Platte 2 | keine Stützen; 4 Wände, 100 % Füllung (Zick-Zack), damit die Hakenwurzeln in vollem Material sitzen; erste Schicht 10 mm/s, innere Wände 100 mm/s; Elefantenfuß 0,15 mm |
 | `Digivice PLA Back` | Filament | Platte 2 | 230 °C, Lüfter 40–70 %, Zusatzlüfter 30 %: bessere Schichthaftung in den Rasthaken |
 
 Die Front druckst du mit einem PLA-Systemprofil, z. B. „Bambu PLA Basic“ oder „Generic PLA“.
 Beide Prozessprofile bauen auf „0.16mm High Quality @BBL X1C“ auf (0,16 mm Schichthöhe) und
-nutzen Arachne-Wände mit „Präzise Wand“. Beide Platten slicen auf dem Standard-P1S ohne
-Fehler; bei Platte 2 kommt die oben beschriebene Warnung zum Clip. Schätzung von
-Bambu Studio 2.8:
+nutzen Arachne-Wände mit „Präzise Wand“.
+
+Richtwerte aus einem Probe-Slice von Version 1.2 mit Bambu Studio 2.8, gemessen auf einem P1S
+mit eigenem Start-G-Code. Auf dem Standard-P1S sind die Werte noch nicht nachgemessen und
+können etwas abweichen. Der Probe-Slice lief ohne Warnungen.
 
 | Platte | Profile | Zeit | Filament |
 |---|---|---|---|
-| 1 | `Digivice Front 0.16mm` + „Generic PLA“ | ca. 3 h 20 min | ca. 64 g |
-| 2 | `Digivice Back 0.16mm` + `Digivice PLA Back` | ca. 1 h 50 min | ca. 33 g |
-
-**Einstellungen für den Clip (optional):** Der Clip steht hochkant auf der Platte.
-`back_clip_slider.stl` per Rechtsklick > **Teilen > Zu Objekten** in drei Objekte teilen, dann
-dem Clip in der Objektliste per Rechtsklick Einstellungen hinzufügen:
-
-- „Stützstrukturen aktivieren“ setzt Stützen unter den Arm und die zwei Zapfen. Die Warnung vor
-  schwebenden Regionen verschwindet. Kostet etwa 5 Minuten und 0,5 g.
-- „Randtyp“ mit „Nur äußerer Rand“ hilft, falls der Clip beim Druck kippelt.
+| 1 | `Digivice Front 0.16mm` + PLA-Systemprofil | ca. 3 h 20 min | ca. 62 g |
+| 2 | `Digivice Back 0.16mm` + `Digivice PLA Back` | ca. 2 h 10 min | ca. 39 g |
 
 **Anderer Drucker oder Slicer:** Die Tabelle nennt die wichtigsten Werte. Die JSON-Dateien in
 `bambu-p1s/` enthalten jede Einstellung, die vom Grundprofil abweicht.
@@ -120,8 +139,8 @@ die Gehäusefarbe. Den Schieber gibt es auf Platte 2, er passt gut in der Knopff
 - **Laden:** USB-C unten rechts (von vorn gesehen). Unten links liegt der UART-Port.
 - **BOOT und RESET:** mit einer Büroklammer durch die zwei Nadellöcher oberhalb des Schiebers.
 - **TF-Karte:** Schlitz oben links.
-- **Öffnen:** siehe [ANLEITUNG.md](ANLEITUNG.md#öffnen). Die Haken aus PLA nicht mit Gewalt
-  hebeln.
+- **Öffnen:** Haken mit einer Büroklammer durch die Fenster lösen und den Deckel an der Kerbe
+  unten anheben, siehe [ANLEITUNG.md](ANLEITUNG.md#öffnen). Die Haken aus PLA nicht hebeln.
 
 ## Film
 
