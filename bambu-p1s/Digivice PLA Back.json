@@ -1,0 +1,31 @@
+{
+    "type": "filament",
+    "name": "Digivice PLA Back",
+    "from": "User",
+    "inherits": "Generic PLA",
+    "compatible_printers": [
+        "Bambu Lab P1S 0.4 nozzle"
+    ],
+    "filament_settings_id": [
+        "Digivice PLA Back"
+    ],
+    "filament_extruder_variant": [
+        "Direct Drive Standard"
+    ],
+    "nozzle_temperature": [
+        "230"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "fan_min_speed": [
+        "40"
+    ],
+    "fan_max_speed": [
+        "70"
+    ],
+    "additional_cooling_fan_speed": [
+        "30"
+    ],
+    "version": "2.8.0.9"
+}
